@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= car.name %></title> <!-- Dynamic title based on car name -->
+  </head>
+  <body>
+    
+    
+    
+    <div class="checkbox-div">
+    <h1><%= car.name %></h1>
+    <!-- Conditional rendering based on car's readiness -->
+    <% if (car.isElectric) { %>
+      <p>This car is Electric!</p>
+    <% } else { %>
+      <p>This car is not Electric!</p>
+    <% } %>
+    <button>
+    <a class="edit-link" href="/cars/<%= car._id %>/edit">
+        <div class="edit-text">Edit <%= car.name %></div>
+    </a>
+    </button>
+
+    <form action="/cars/<%=car._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= car.name %></button>
+    </form>
+    </div>
+  </body>
+</html>

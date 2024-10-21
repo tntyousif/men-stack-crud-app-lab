@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit a Car</title>
+  </head>
+<body>
+    <button>
+    <a class="cars-index-link" href="/cars">
+        <div class="index-link-text">Back to cars </div>
+    </a>
+    </button>
+    
+    <!-- update the header -->
+    <h1>Edit <%= car.name %></h1>
+    <!-- updated form -->
+
+<form action="/cars/<%=car._id%>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%= car.name %>" />
+  
+    <div class="checkbox-div">
+        <label for="is-electric">Electric car?</label>
+        <input type="checkbox" name="isElectric" id="is-electric" />
+    </div>
+
+    <button type="submit">Update Car</button>
+</form>
+    
+  </body>

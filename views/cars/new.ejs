@@ -1,0 +1,33 @@
+<!-- views/cars/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Cars</title>
+  </head>
+  <body>
+    <!-- views/cars/new.ejs -->
+    <button>
+    <a class="cars-index-link" href="/cars">
+        <div class="index-link-text">Back to cars</div>
+      </a>
+    </button>
+
+    <h1>Create a New favourite Car!</h1>
+    <form action="/cars" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+  
+     <!-- new.ejs / edit.ejs -->
+
+        <div class="checkbox-div">
+            <label for="is-electric">Electric car?</label>
+            <input type="checkbox" name="isElectric" id="is-electric" />
+        </div>
+      <button type="submit">Add Cars</button>
+      
+    </form>
+  </body>
+</html>

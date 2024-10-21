@@ -1,0 +1,27 @@
+<!-- views/Cars/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cars Index</title>
+  </head>
+<body>
+    <!-- views/Cars/index.ejs -->
+    <button>
+    <a class="add-car" href="/Cars/new">Add car</a>
+    </button>
+    
+    <h1>All Cars</h1>
+    <ul>
+      <% cars.forEach(car => { %>
+        <li>
+            <a class="car-cards" href="/Cars/<%=car._id%>">
+              <%= car.name %>
+            </a>
+          </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
